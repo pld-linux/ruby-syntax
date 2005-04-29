@@ -8,7 +8,6 @@ Release:	1
 License:	GPL
 Group:		Development/Libraries
 Source0:	syntax.rb
-# Source0-md5:	2c0b1110029d6b3e7d64d9a141021bc3
 Source1:	setup.rb
 URL:	http://raa.ruby-lang.org/project/syntax/
 BuildRequires:	ruby
@@ -48,4 +47,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %{ruby_rubylibdir}/*
-%{ruby_ridir}/*
+%{ruby_ridir}/Syntax*
