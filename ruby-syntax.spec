@@ -1,6 +1,3 @@
-%define		ruby_rubylibdir	%(ruby -r rbconfig -e 'print Config::CONFIG["rubylibdir"]')
-%define		ruby_ridir	%(ruby -r rbconfig -e 'include Config; print File.join(CONFIG["datadir"], "ri", CONFIG["ruby_version"], "system")')
-
 Summary:	Syntax classes for specifying BNF-like grammar in Ruby
 Summary(pl):	Klasy sk³adni do opisu gramatyk typu BNF w jêzyku Ruby
 Name:		ruby-syntax
@@ -11,6 +8,7 @@ Group:		Development/Libraries
 Source0:	syntax.rb
 Source1:	setup.rb
 URL:		http://raa.ruby-lang.org/project/syntax/
+BuildRequires:	rpmbuild(macros) >= 1.263
 BuildRequires:	ruby
 #BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -22,12 +20,12 @@ Syntax classes for specifying BNF-like grammar in Ruby.
 Klasy sk³adni do opisu gramatyk typu BNF w jêzyku Ruby.
 
 %prep
-%setup -c -T
-
-%build
+%setup -q -c -T
 mkdir lib
 cp %{SOURCE0} lib
 cp %{SOURCE1} .
+
+%build
 ruby setup.rb config \
 	--site-ruby=%{ruby_rubylibdir} \
 	--so-dir=%{ruby_archdir}
