@@ -2,14 +2,14 @@ Summary:	Syntax classes for specifying BNF-like grammar in Ruby
 Summary(pl):	Klasy sk³adni do opisu gramatyk typu BNF w jêzyku Ruby
 Name:		ruby-syntax
 Version:	0.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Libraries
 Source0:	syntax.rb
 Source1:	setup.rb
 URL:		http://raa.ruby-lang.org/project/syntax/
 BuildRequires:	rpmbuild(macros) >= 1.263
-BuildRequires:	ruby
+BuildRequires:	ruby-modules
 #BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
