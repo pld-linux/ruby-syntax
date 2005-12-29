@@ -8,9 +8,10 @@ Group:		Development/Libraries
 Source0:	syntax.rb
 Source1:	setup.rb
 URL:		http://raa.ruby-lang.org/project/syntax/
-BuildRequires:	rpmbuild(macros) >= 1.263
+BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-modules
 #BuildArch:	noarch
+%ruby_mod_ver_requires_eq
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
