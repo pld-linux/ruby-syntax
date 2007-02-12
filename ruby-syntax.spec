@@ -1,5 +1,5 @@
 Summary:	Syntax classes for specifying BNF-like grammar in Ruby
-Summary(pl):	Klasy sk³adni do opisu gramatyk typu BNF w jêzyku Ruby
+Summary(pl.UTF-8):   Klasy skÅ‚adni do opisu gramatyk typu BNF w jÄ™zyku Ruby
 Name:		ruby-syntax
 Version:	0.1
 Release:	2
@@ -17,8 +17,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Syntax classes for specifying BNF-like grammar in Ruby.
 
-%description -l pl
-Klasy sk³adni do opisu gramatyk typu BNF w jêzyku Ruby.
+%description -l pl.UTF-8
+Klasy skÅ‚adni do opisu gramatyk typu BNF w jÄ™zyku Ruby.
 
 %prep
 %setup -q -c -T
