@@ -12,6 +12,7 @@ License:	Public Domain
 Group:		Development/Languages
 Source0:	http://gems.rubyforge.org/gems/%{pkgname}-%{version}.gem
 # Source0-md5:	d9d2eabc03bc937adfa00e35f228f9a8
+Patch0:		rubygem-syntax-fix-yaml-parse-for-ruby-1.9.patch
 URL:		http://syntax.rubyforge.org/
 BuildRequires:	rpm-rubyprov
 BuildRequires:	rpmbuild(macros) >= 1.656
@@ -29,6 +30,7 @@ Klasy składni do opisu gramatyk typu BNF w języku Ruby.
 
 %prep
 %setup -q -n %{pkgname}-%{version}
+%patch0 -p0
 
 %build
 %if %{with tests}
