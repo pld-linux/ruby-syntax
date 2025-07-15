@@ -30,7 +30,7 @@ Klasy składni do opisu gramatyk typu BNF w języku Ruby.
 
 %prep
 %setup -q -n %{pkgname}-%{version}
-%patch0 -p0
+%patch -P0 -p0
 
 %build
 %if %{with tests}
